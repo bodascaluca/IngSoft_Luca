@@ -84,3 +84,63 @@ document.querySelector("#btnAvanti").addEventListener("click", () => {
     }
     updateFilm();
 });
+
+var btnLogin = document.querySelector("#btnLogin");
+var divLogin = document.querySelector("#divLogin");
+var benvenuto = document.querySelector("#benvenuto");
+var divLocandina = document.querySelector("#divLocandina");
+var divLogin = document.querySelector("#divLogin");
+
+var ul = document.querySelector("#ul")
+
+
+
+
+function login(){
+
+    var username = document.querySelector("#username").value;
+    var password = document.querySelector("#password").value;
+
+    localStorage.setItem("username", username)
+    localStorage.setItem("password", password)
+
+    if(username=="" || password==""){
+        benvenuto.innerHTML= "Devi comlettare entrambi i campi";
+    }else{
+        benvenuto.innerHTML= "Benvenuto "+ username;
+        var btn = document.createElement("button");
+        btn.textContent="Compra"
+        divLocandina.appendChild(btn);
+    }
+
+    var films = [];
+
+    btn.onclick = function(){
+
+        
+        for (let i = 0; i < filmsJSON.length - 1; i++) {
+
+            var el = filmsJSON[index].titolo
+
+            films.push(el)
+
+            localStorage.setItem("films", films);
+
+            var li = document.createElement("li")
+
+            ul.appendChild(li);
+
+        }
+
+        films.forEach(element => {
+
+            li.innerHTML=element;
+            
+        });
+       
+    }
+
+}
+
+
+btnLogin.addEventListener("click", login);
