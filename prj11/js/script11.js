@@ -43,3 +43,40 @@ img2.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9Gc
 img3.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQASctN-yj7IrWWRyrOUvBgNN8yarGkTfffJw&usqp=CAU");
 img4.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5GPDtLAKZ6q5DGJw5dCgdfjOPQfTOUCoVdg&usqp=CAU");
 
+
+var lis = document.querySelectorAll("li"); //NodeList, simili agli array, un array dui oggetti HTML
+console.log(lis);
+
+var img1= document.querySelector("#img11");
+var img1= document.querySelector("#img21");
+var img1= document.querySelector("#img31");
+var img1= document.querySelector("#img41");
+var img1= document.querySelector("#img51");
+
+
+img11.setAttribute.setAttribute("class","ddimImg");
+
+var attore1 ="Robert De Niro";
+var a1 = document.createElement("a");
+a1.textContent=attori1;
+
+a1.setAttribute("href", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5GPDtLAKZ6q5DGJw5dCgdfjOPQfTOUCoVdg&usqp=CAU" );
+list[0]=appendChild(a1);
+
+//*******************Versione del prof**************************
+
+var lis = document.querySelectorAll("li");
+var attori = ["Robert de niro", "Leonardo di caprio", "Al pacino", "Merylin Stgreep"];
+//Sono tutti 
+
+for (let i = 0; i < lis.length; i++) {
+   let a = document.createElement("a");
+   a.textContent= attori[i];
+   a.setAttribute("href", "https://it.wikipedia.org/wiki/"+attori[i]);
+   lis[i].appendChild(a);
+}
+
+
+lis.forEach(li=>{
+
+})
